@@ -1,14 +1,12 @@
 {
-  "name": "eng-vocab-backend",
+  "name": "vocab-db",
   "version": "0.0.1",
   "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
