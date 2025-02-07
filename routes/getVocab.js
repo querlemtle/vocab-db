@@ -6,7 +6,7 @@ const getVocab = express.Router();
 
 // Get paginated vocabulary results
 getVocab.get("/", async (req, res, next) => {
-	const { page = 1 } = Number(req.query);
+	const page = Number(req.query.page || 1);
 	const pipeline = [
 		{
 			$facet: {
@@ -34,7 +34,7 @@ getVocab.get("/", async (req, res, next) => {
 			},
 		});
 	} catch (error) {
-		res.status(500).send("Error: Fail to fetch vocabulary.");
+		res.status(500).send(error.message);
 	}
 });
 
